@@ -1,12 +1,12 @@
 # wash_alert.py
-# سامانه هشدار شست‌وشو
+# Washing alert system
 
 def check_wash_alert(heat_transfer_coeff, motor_power):
     if heat_transfer_coeff < 550:
-        return "هشدار: نیاز فوری به شست‌وشو"
+        return "Alert: immediate washing required"
     elif heat_transfer_coeff < 650:
-        return "هشدار: حدود ۵ روز تا شست‌وشو"
+        return "Alert: about 5 days until washing"
     else:
-        return "وضعیت عادی"
+        return "Normal status"
 
 print(check_wash_alert(500, 125))

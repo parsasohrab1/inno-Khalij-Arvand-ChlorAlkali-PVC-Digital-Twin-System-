@@ -1,1 +1,1 @@
-راه‌اندازی پایگاه داده سری‌زمانی برای ذخیره داده سلول و راکتور
+Setting up the time-series database for storing cell and reactor data

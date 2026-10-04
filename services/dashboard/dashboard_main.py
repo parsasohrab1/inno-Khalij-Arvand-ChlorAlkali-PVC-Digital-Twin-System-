@@ -1,12 +1,12 @@
 # dashboard_main.py
-# داشبورد مدیریتی زنجیره
+# Chain management dashboard
 
 def show_dashboard():
-    print("=== داشبورد سامانه سلامت زنجیره ===")
-    print("وضعیت سلول‌ها: عادی")
-    print("وضعیت راکتورها: عادی")
-    print("مصرف انرژی: قابل قبول")
-    print("هشدارها: هیچ")
+    print("=== Chain Health System Dashboard ===")
+    print("Cell status: Normal")
+    print("Reactor status: Normal")
+    print("Energy consumption: Acceptable")
+    print("Alerts: None")
 
 if __name__ == "__main__":
     show_dashboard()

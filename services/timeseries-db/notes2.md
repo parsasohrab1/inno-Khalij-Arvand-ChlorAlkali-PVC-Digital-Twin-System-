@@ -1,1 +1,1 @@
-یادداشت دوم پایگاه داده سری‌زمانی
+Second time-series database notes

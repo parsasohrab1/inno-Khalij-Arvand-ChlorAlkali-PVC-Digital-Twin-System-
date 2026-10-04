@@ -1,23 +1,23 @@
 # feedback_recording.py
-# ثبت بازخورد واقعی برای بازآموزی مدل
+# Recording real feedback for model retraining
 
 def record_feedback(feedback_type, value, note=""):
     """
-    ثبت بازخورد واقعی.
+    Record real feedback.
     
-    ورودی:
-        feedback_type: نوع بازخورد (تعویض غشا یا شست‌وشو)
-        value: مقدار واقعی ثبت‌شده
-        note: توضیح اضافی
+    Input:
+        feedback_type: feedback type (membrane replacement or washing)
+        value: the recorded real value
+        note: additional description
     """
     feedback = {
         "type": feedback_type,
         "value": value,
         "note": note
     }
-    print("بازخورد ثبت شد:", feedback)
+    print("Feedback recorded:", feedback)
     return feedback
 
 if __name__ == "__main__":
-    record_feedback("تعویض غشا", "1405-07-15", "غشای سلول ۳ تعویض شد.")
-    record_feedback("شست‌وشو", "1405-07-20", "اتوکلاو ۲ شست‌وشو شد.")
+    record_feedback("Membrane replacement", "1405-07-15", "The membrane of cell 3 was replaced.")
+    record_feedback("Washing", "1405-07-20", "Autoclave 2 was washed.")

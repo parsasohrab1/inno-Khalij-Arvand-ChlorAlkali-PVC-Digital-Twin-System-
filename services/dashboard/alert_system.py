@@ -1,20 +1,20 @@
 # alert_system.py
-# سامانه هشدار بلادرنگ
+# Real-time alert system
 
 def check_alerts(cell_health, fouling_risk):
     """
-    بررسی وضعیت و تولید هشدار مناسب.
+    Check the status and generate the appropriate alert.
     """
     alerts = []
     
     if cell_health < 90:
-        alerts.append("هشدار: سلامت سلول پایین است.")
+        alerts.append("Alert: cell health is low.")
     
     if fouling_risk > 70:
-        alerts.append("هشدار: ریسک فولینگ بالا است.")
+        alerts.append("Alert: fouling risk is high.")
     
     if not alerts:
-        return "وضعیت عادی."
+        return "Normal status."
     
     return " | ".join(alerts)
 

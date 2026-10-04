@@ -1,22 +1,22 @@
 # prediction_api.py
-# رابط خروجی پیش‌بینی
+# Prediction output interface
 
 import joblib
 import numpy as np
 
-# بارگذاری مدل ذخیره‌شده
+# Load the saved model
 model = joblib.load("membrane_decay_model.pkl")
 
 def predict(cell_voltage, current_efficiency):
     """
-    پیش‌بینی روند زوال غشا.
+    Predict the membrane degradation trend.
     
-    ورودی:
-        cell_voltage: ولتاژ سلول
-        current_efficiency: راندمان جریان
+    Input:
+        cell_voltage: cell voltage
+        current_efficiency: current efficiency
     
-    خروجی:
-        پیش‌بینی راندمان جریان آینده
+    Output:
+        Predict future current efficiency
     """
     features = np.array([[cell_voltage, current_efficiency]])
     prediction = model.predict(features)
@@ -28,4 +28,4 @@ def predict(cell_voltage, current_efficiency):
 
 if __name__ == "__main__":
     result = predict(3.05, 96.5)
-    print("پیش‌بینی:", result)
+    print("Prediction:", result)

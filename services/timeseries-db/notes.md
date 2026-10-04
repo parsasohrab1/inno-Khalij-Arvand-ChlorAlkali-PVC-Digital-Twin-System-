@@ -1,1 +1,1 @@
-یادداشت راه‌اندازی پایگاه داده سری‌زمانی
+Time-series database setup notes

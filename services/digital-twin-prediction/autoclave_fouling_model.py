@@ -1,24 +1,24 @@
 # autoclave_fouling_model.py
-# مدل پیش‌بینی فولینگ اتوکلاو
+# Autoclave fouling prediction model
 
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 import joblib
 
-# بارگذاری داده سنتتیک
+# Load synthetic data
 df = pd.read_csv("arvand_chain_health_data_10k.csv")
 
-# ویژگی‌ها: ضریب انتقال حرارت و توان همزن
+# Features: heat transfer coefficient and agitator power
 X = df[['jacket_heat_transfer_coeff', 'agitator_motor_power_kw']].values
-# هدف: شاخص فولینگ (برعکس ضریب انتقال حرارت)
+# Target: fouling index (inverse of heat transfer coefficient)
 y = df['jacket_heat_transfer_coeff'].values
 
-# مدل ساده رگرسیون خطی
+# Simple linear regression model
 model = LinearRegression()
 model.fit(X, y)
 
-# ذخیره مدل
+# Save the model
 joblib.dump(model, "autoclave_fouling_model.pkl")
 
-print("مدل فولینگ اتوکلاو ساخته و ذخیره شد.")
+print("Autoclave fouling model built and saved.")

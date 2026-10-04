@@ -1,18 +1,18 @@
 # tariff_connection.py
-# اتصال به سامانه تعرفه برق
+# Connection to the electricity tariff system
 
 def get_tariff(hour):
     """
-    دریافت تعرفه برق بر اساس ساعت.
-    این یک نمونه ساده است.
+    Get the electricity tariff based on the hour.
+    This is a simple example.
     """
     if 0 <= hour < 6:
-        return 0.08  # تعرفه کم‌باری
+        return 0.08  # off-peak tariff
     elif 6 <= hour < 18:
-        return 0.15  # تعرفه میان‌باری
+        return 0.15  # mid-peak tariff
     else:
-        return 0.22  # تعرفه اوج‌باری
+        return 0.22  # peak tariff
 
 if __name__ == "__main__":
     for h in [2, 10, 20]:
-        print(f"ساعت {h}: تعرفه = {get_tariff(h)}")
+        print(f"Hour {h}: tariff = {get_tariff(h)}")

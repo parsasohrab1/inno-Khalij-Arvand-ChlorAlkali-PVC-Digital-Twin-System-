@@ -1,15 +1,15 @@
 # specific_energy_calc.py
-# محاسبه مصرف انرژی ویژه
+# Specific energy consumption calculation
 
 import pandas as pd
 
-# بارگذاری داده
+# Load data
 df = pd.read_csv("arvand_chain_health_data_10k.csv")
 
-# تابع محاسبه مصرف انرژی ویژه
+# Specific energy consumption calculation function
 def calculate_specific_energy(voltage, efficiency):
-    # این یک فرمول ساده و نمونه است.
-    # در واقعیت باید بر اساس داده‌های واقعی تنظیم شود.
+    # This is a simple sample formula.
+    # In reality it must be tuned based on real data.
     constant = 1000
     return voltage * (100 / efficiency) * constant
 
@@ -19,4 +19,4 @@ df['calculated_energy'] = df.apply(
 )
 
 print(df[['cell_voltage_v', 'current_efficiency_percent', 'calculated_energy']].head())
-print("محاسبه مصرف انرژی ویژه انجام شد.")
+print("Specific energy consumption calculation completed.")

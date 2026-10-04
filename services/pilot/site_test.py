@@ -1,25 +1,25 @@
 # site_test.py
-# تست سامانه در سایت اروند
+# System test at the Arvand site
 
 def run_site_test():
     """
-    اجرای تست سامانه در سایت.
-    این یک نمونه ساده است.
+    Run the system test at the site.
+    This is a simple example.
     """
-    print("شروع تست در سایت اروند...")
+    print("Starting the test at the Arvand site...")
     
     results = {
-        "cell_connection": "موفق",
-        "autoclave_connection": "موفق",
-        "prediction_model": "موفق",
-        "alert_system": "موفق",
-        "dashboard": "موفق"
+        "cell_connection": "Successful",
+        "autoclave_connection": "Successful",
+        "prediction_model": "Successful",
+        "alert_system": "Successful",
+        "dashboard": "Successful"
     }
     
     for item, status in results.items():
         print(f"{item}: {status}")
     
-    print("تست در سایت با موفقیت انجام شد.")
+    print("The test at the site completed successfully.")
 
 if __name__ == "__main__":
     run_site_test()

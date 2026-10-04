@@ -1,1 +1,1 @@
-راه‌اندازی صف پیام برای دریافت داده سلول و راکتور
+Setting up the message queue for receiving cell and reactor data

@@ -1,13 +1,13 @@
 # test_model.py
-# تست مدل زوال غشا
+# Membrane degradation model test
 
 import joblib
 import numpy as np
 
-# بارگذاری مدل
+# Load the model
 model = joblib.load("membrane_decay_model.pkl")
 
-# داده تست نمونه
+# Sample test data
 test_data = np.array([
     [3.05, 96.5],
     [3.10, 95.0],
@@ -15,11 +15,11 @@ test_data = np.array([
     [3.20, 92.0],
 ])
 
-# پیش‌بینی
+# Prediction
 predictions = model.predict(test_data)
 
-# نمایش نتیجه
+# Display the result
 for i, pred in enumerate(predictions):
-    print(f"نمونه {i+1}: راندمان پیش‌بینی‌شده = {pred:.2f}")
+    print(f"Sample {i+1}: predicted efficiency = {pred:.2f}")
 
-print("تست مدل با موفقیت انجام شد.")
+print("Model test completed successfully.")
